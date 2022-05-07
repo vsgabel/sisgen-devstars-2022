@@ -6,19 +6,22 @@
         <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">SG-1</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> 
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link">Home</a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="index.html" class="navbar-brand">
+                    <img src="logo_recortado.png" style="width: 130px;" class="rounded-pill">
+                </a>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="registro.html" class="nav-link">Registrar</a>
+                    </li>
+                </ul>
             </div>
         </nav>
         <div class="container">
@@ -26,24 +29,35 @@
                 <h1>Sistema Genérico 1.0</h1>
             </div>
             <div class="row text-center">
-                <p>Faça login para acessar o sistema:</p>
+                <p>Seja bem-vindo ao Sistema Genérico. Deseja fazer <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal_login">login</button>?</p>
             </div>
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <form id="form" method="post" class="form-login">
-                        <div class="row">
-                            <input type="text" name="usuario" class="form-control" placeholder="Digite seu usuário" required>
-                        </div>
-                        <div class="row">
-                            <input type="password" name="senha" class="form-control" placeholder="Digite sua senha" style="margin-top: 10px; margin-bottom: 10px;" required>
-                        </div>
-                        <div class="row">
-                            <input type="submit" class="btn btn-primary">
-                        </div>
-                    </form>
+            
+        </div>
+
+        <div class="modal fade" id="modal_login">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form" method="post" class="form-login">
+                            <div class="row">
+                                <input type="text" name="usuario" class="form-control" placeholder="Digite seu usuário" required>
+                            </div>
+                            <div class="row">
+                                <input type="password" name="senha" class="form-control" placeholder="Digite sua senha" style="margin-top: 10px; margin-bottom: 10px;" required>
+                            </div>
+                            <div class="row">
+                                <input type="submit" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
                 </div>
-                <div class="col-md-4"></div>
             </div>
         </div>
 
