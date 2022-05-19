@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row text-center">
+            <h1>Sistema Genérico 1.0</h1>
+        </div>
+        
+        <div class="row text-center">
+            <p>Preencha o formulário para entrar em contato conosco:</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <form id="form" method="post" class="form-login">
+                    <div class="row">
+                        <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="row">
+                        <input type="email" name="email" class="form-control" placeholder="Digite seu e-mail" style="margin-top: 10px; margin-bottom: 10px;" required>
+                    </div>
+                    <div class="row">
+                        <textarea name="mensagem" placeholder="Digite sua mensagem" class="form-control" required></textarea>
+                    </div>
+                    <div class="row mt-2">
+                        <input type="submit" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+{% endblock %}     
