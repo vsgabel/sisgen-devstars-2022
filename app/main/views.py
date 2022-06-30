@@ -1,29 +1,21 @@
-from flask import Flask, render_template, request
-from flask_mail import Mail, Message
+from app.main import main
+from app import mail
+from flask import render_template, request
+from flask_mail import Message
 
-app = Flask(__name__)
-app.config["MAIL_SERVER"] = 'smtp.mailtrap.io'
-app.config["MAIL_PORT"] = "587" 
-app.config["MAIL_USE_TLS"] = True
-app.config["MAIL_USE_SSL"] = False
-app.config["MAIL_USERNAME"] = "3237568cc08f00"
-app.config["MAIL_PASSWORD"] = "959d477fc33a0a"
-
-mail = Mail(app)
-
-@app.route("/")
+@main.route("/")
 def index():
     return render_template("index.html")
 
-@app.route("/login")
+@main.route("/login")
 def login():
     return render_template("login.html")
 
-@app.route("/registro")
+@main.route("/registro")
 def registro():
     return render_template("registro.html")
 
-@app.route("/contato", methods=['GET', 'POST'])
+@main.route("/contato", methods=['GET', 'POST'])
 def contato():
     dados = request.form
     if dados:
@@ -44,6 +36,3 @@ def contato():
 
         mail.send(msg)
     return render_template("contato.html")
-
-if __name__ == "__main__":
-    app.run(debug=True)
